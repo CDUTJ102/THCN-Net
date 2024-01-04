@@ -5,7 +5,7 @@
 # DRA-UNet
 This is the official PyTorch implementation of the DRA-UNet dose prediction algorithm from "Advancing Precision Medicine in Nasopharyngeal Carcinoma: A Dense Recurrent Attention UNet based on Transformer for dose prediction in radiotherapy" (Yanhua Liu, Xiangchen Li, Min Liu, Feng Yang, Hongjuan Yang, 2023).
 
-The novel Dense Recurrent Attention UNet based on Transformer, named DRA-UNet, for the automatic prediction of dose distribution using computer tomography (CT) images and masks of planning target volumes (PTVs) and organs at risk (OARs).
+The novel Dense Recurrent Attention UNet based on Transformer, named DRA-UNet, for the automatic prediction of dose distribution using computer tomography (CT) images, masks of planning target volumes (PTVs) and organs at risk (OARs).
 
 <img src="./model/DRA-UNet.png" width="800px">
 
