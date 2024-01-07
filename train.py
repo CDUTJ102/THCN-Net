@@ -8,7 +8,7 @@ if __name__ == '__main__':
     parser = OptionParser()
     parser.add_option('-e', '--epochs', dest='epochs', default=300, type='int', help='number of epochs')
     parser.add_option('-s', '--step-size', dest='step_size', default=40, type='int', help='number of decay epochs')
-    parser.add_option('-b', '--batch-size', dest='batch_size', default=25, type='int', help='batch size')
+    parser.add_option('-b', '--batch-size', dest='batch_size', default=12, type='int', help='batch size')
     parser.add_option('-g', '--gamma', dest='gamma', default=0.4, type='float',
                       help='decay coefficient of learning rate')
     parser.add_option('-c', '--resume', type='str', dest='load', default=False, help='load pretrained model')

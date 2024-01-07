@@ -63,8 +63,8 @@ class Contour(nn.Module):
 class Contour_up(nn.Module):
     def __init__(self, ch_in):
         super(Contour_up, self).__init__()
-        self.Conv = nn.ConvTranspose2d(ch_in, ch_in-32, kernel_size=4, stride=2, padding=1)
-        self.IN = nn.InstanceNorm2d(ch_in-32)
+        self.Conv = nn.ConvTranspose2d(ch_in, ch_in-64, kernel_size=4, stride=2, padding=1)
+        self.IN = nn.InstanceNorm2d(ch_in-64)
         self.ReLU = nn.ReLU(inplace=True)
 
     def forward(self, x):
@@ -75,7 +75,7 @@ class Contour_up(nn.Module):
 
 
 class RRCNN_block(nn.Module):
-    def __init__(self, ch_in, ch_out=32, t=2):
+    def __init__(self, ch_in, ch_out=64, t=2):
         super(RRCNN_block, self).__init__()
         self.RCNN = Recurrent_block(ch_out, t=t)
         self.Conv_1x1 = nn.Conv2d(ch_in, ch_out, kernel_size=3, stride=1, padding=1)
@@ -160,7 +160,7 @@ class CBAM(nn.Module):
 
 
 class DenseDownsample(nn.Module):
-    def __init__(self, ch_in, grate=32):
+    def __init__(self, ch_in, grate=64):
         super(DenseDownsample, self).__init__()
         self.single_conv = nn.Sequential(
             nn.Conv2d(ch_in, grate, kernel_size=3, stride=2, padding=1, bias=True),
@@ -174,7 +174,7 @@ class DenseDownsample(nn.Module):
 
 
 class DRA_UNet(nn.Module):
-    def __init__(self, inc=3, n_classes=1, grate=32, base_chns=16):
+    def __init__(self, inc=3, n_classes=1, grate=64, base_chns=32):
         super(DRA_UNet, self).__init__()
         self.conv1_1 = RRCNN_block(inc)
         self.down1 = DenseDownsample(inc+grate)
@@ -201,7 +201,7 @@ class DRA_UNet(nn.Module):
         self.conv7_1 = RRCNN_dblock(inc+9*grate, 8 * base_chns, t=2)
         self.conv8_1 = RRCNN_dblock(inc+5*grate, 4 * base_chns, t=2)
         self.conv9_1 = RRCNN_dblock(inc+2*grate, 2 * base_chns, t=2)
-        self.up5 = nn.Sequential(nn.ConvTranspose2d(64 * base_chns, 16 * base_chns, 4, 2, 1),
+        self.up5 = nn.Sequential(nn.ConvTranspose2d(32 * base_chns, 16 * base_chns, 4, 2, 1),
                                  )
         self.up6 = nn.Sequential(nn.ConvTranspose2d(16 * base_chns, 8 * base_chns, 4, 2, 1))
         self.up7 = nn.Sequential(nn.ConvTranspose2d(8 * base_chns, 4 * base_chns, 4, 2, 1))
