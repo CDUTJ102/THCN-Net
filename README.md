@@ -2,7 +2,7 @@
 ![Repo Size](https://img.shields.io/github/repo-size/CDUTJ102/DRA-UNet)
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a>
 
-# DRA-UNet
+# TDR-UNet
 This is the official PyTorch implementation of the TDR-UNet dose prediction algorithm from "Dose prediction via Transformer-integrated Dense Recurrent UNet for nasopharyngeal carcinoma in radiotherapy".
 
 The novel Transformer-integrated Dense Recurrent UNet, named TDR-UNet, for the automatic prediction of dose distribution using computer tomography (CT) images, masks of planning target volumes (PTVs) and organs at risk (OARs).
