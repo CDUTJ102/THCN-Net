@@ -3,9 +3,9 @@
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a>
 
 # DRA-UNet
-This is the official PyTorch implementation of the DRA-UNet dose prediction algorithm from "Advancing Precision Medicine in Nasopharyngeal Carcinoma: A Dense Recurrent Attention UNet based on Transformer for dose prediction in radiotherapy" (Yanhua Liu, Xiangchen Li, Min Liu, Feng Yang, Hongjuan Yang, 2023).
+This is the official PyTorch implementation of the TDR-UNet dose prediction algorithm from "Dose prediction via Transformer-integrated Dense Recurrent UNet for nasopharyngeal carcinoma in radiotherapy".
 
-The novel Dense Recurrent Attention UNet based on Transformer, named DRA-UNet, for the automatic prediction of dose distribution using computer tomography (CT) images, masks of planning target volumes (PTVs) and organs at risk (OARs).
+The novel Transformer-integrated Dense Recurrent UNet, named TDR-UNet, for the automatic prediction of dose distribution using computer tomography (CT) images, masks of planning target volumes (PTVs) and organs at risk (OARs).
 
 <img src="./model/DRA-UNet.png" width="800px">
 
@@ -34,7 +34,7 @@ To start training, run `train.py`. The training process will be logged into the 
 
 # Example
 
-This is an example file for training a `DRA-UNet` model:
+This is an example file for training a `TDR-UNet` model:
 
 ```yml
 epochs: 300
