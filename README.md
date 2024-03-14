@@ -2,10 +2,10 @@
 ![Repo Size](https://img.shields.io/github/repo-size/CDUTJ102/DRA-UNet)
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a>
 
-# TDR-UNet
-This is the official PyTorch implementation of the TDR-UNet dose prediction algorithm from "Dose prediction via Transformer-integrated Dense Recurrent UNet for nasopharyngeal carcinoma in radiotherapy".
+# THCN-Net
+This is the official PyTorch implementation of the THCN-Net dose prediction algorithm from "Transformer-integrated Hybrid Convolutional Neural Network for Dose Prediction in Nasopharyngeal Carcinoma Radiotherapy".
 
-The novel Transformer-integrated Dense Recurrent UNet, named TDR-UNet, for the automatic prediction of dose distribution using computer tomography (CT) images, masks of planning target volumes (PTVs) and organs at risk (OARs).
+The novel Transformer-integrated Hybrid Convolutional Neural Network, named THCN-Net, for the automatic prediction of dose distribution using computer tomography (CT) images, masks of planning target volumes (PTVs) and organs at risk (OARs).
 
 <img src="./model/DRA-UNet.png" width="800px">
 
@@ -34,7 +34,7 @@ To start training, run `train.py`. The training process will be logged into the 
 
 # Example
 
-This is an example file for training a `TDR-UNet` model:
+This is an example file for training a `THCN-Net` model:
 
 ```yml
 epochs: 300
